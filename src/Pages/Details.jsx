@@ -1,11 +1,8 @@
-import React from 'react'
+import { useEffect } from "react";
 
 const Details = () => {
-  return (
-    <div>
-      Details
-    </div>
-  )
-}
+  useEffect(() => {}, []);
+  return <div>Details</div>;
+};
 
-export default Details
+export default Details;

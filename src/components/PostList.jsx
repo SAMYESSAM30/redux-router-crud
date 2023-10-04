@@ -1,6 +1,7 @@
-import React from 'react'
-import { Table, Button, ButtonGroup, } from "react-bootstrap";
-const PostList = () => {
+import { Table } from "react-bootstrap";
+import PostListItem from "./PostListItem";
+
+const PostList = ({ data }) => {
   return (
     <Table striped bordered hover>
       <thead>
@@ -11,19 +12,10 @@ const PostList = () => {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>#1</td>
-          <td>this is title 1</td>
-          <td>
-            <ButtonGroup aria-label="Basic example">
-              <Button variant="success">Edit</Button>
-              <Button variant="danger">Delete</Button>
-            </ButtonGroup>
-          </td>
-        </tr>
+        <PostListItem data={data} />
       </tbody>
     </Table>
-  )
-}
+  );
+};
 
-export default PostList
+export default PostList;
